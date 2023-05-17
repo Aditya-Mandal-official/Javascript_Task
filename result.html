@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result System</title>
+</head>
+<body>
+    <script>
+
+        var sub1 = Number(prompt("Enter number Sub1:--"));
+        var sub2 = Number(prompt("Enter number Sub2:--"));
+        var sub3 = Number(prompt("Enter number Sub3:--"));
+        var sub4 = Number(prompt("Enter number Sub4:--"));
+        var sub5 = Number(prompt("Enter number Sub5:--"));
+
+        var total = sub1+sub2+sub3+sub4+sub5;
+        var perc = total/500*100;
+
+        document.write("Total Marks:-" + total + "<br>");
+        document.write("Total Percentage:-" + perc.toFixed(2) + "<br>");
+
+        if (100>=sub1 && 100>=sub2 && 100>=sub3 && 100>=sub4 && 100>=sub5) {
+            
+            if (sub1>=35 && sub2>=35 && sub3>=35 && sub4>=35 && sub5>=35) {
+
+                if (perc>=60) {
+                    document.write("First divison");
+                }
+                else if (perc>=45) {
+                    document.write("Second divison");
+                }
+                else if (perc>=33) {
+                    document.write("Third divison");
+                }
+            }
+            else{
+                document.write("fail");
+            }
+        }
+        else{
+            document.write("Invalid Marks");
+        }
+    </script>
+</body>
+</html>
