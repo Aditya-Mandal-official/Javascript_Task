@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Result System</title>
+</head>
+<body>
+    <script>
+
+        var sub1 = Number(prompt("Enter number Sub1:--"));
+        var sub2 = Number(prompt("Enter number Sub2:--"));
+        var sub3 = Number(prompt("Enter number Sub3:--"));
+        var sub4 = Number(prompt("Enter number Sub4:--"));
+        var sub5 = Number(prompt("Enter number Sub5:--"));
+
+        var total = sub1+sub2+sub3+sub4+sub5;
+        var perc = total/500*100;
+
+        document.write("Total Marks:-" + total + "<br>");
+        document.write("Total Percentage:-" + perc.toFixed(2) + "<br>");
+
+        if (100>=sub1 && 100>=sub2 && 100>=sub3 && 100>=sub4 && 100>=sub5) {
+            
+            if (sub1>=35 && sub2>=35 && sub3>=35 && sub4>=35 && sub5>=35) {
+
+                if (perc>=60) {
+                    var fisrt = "First division";
+                }
+                else if (perc>=45) {
+                    var second = "Second division";
+                }
+                else if (perc>=33) {
+                    // document.write("Third div");
+                    var third = "Third division";
+                }
+            }
+            else{
+              var fail=  document.write("fail");
+                // var fail = "fail";
+            }
+        }
+        else{
+            document.write("Invalid Marks");
+        }
+    </script>
+    <div class="w-25  m-auto"  style="margin-top: 140px !important;">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Subject</th>
+                <th scope="col">Marks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Bengali</th>
+                <td><script>document.write(sub1);</script></td>
+              </tr>
+              <tr>
+                <th scope="row">English</th>
+                <td><script>document.write(sub2);</script></td>
+              </tr>
+              <tr>
+                <th scope="row">Maths</th>
+                <td><script>document.write(sub3);</script></td>
+              </tr>
+              <tr>
+                <th scope="row">Computer</th>
+                <td><script>document.write(sub4);</script></td>
+              </tr>
+              <tr>
+                <th scope="row">History</th>
+                <td><script>document.write(sub5);</script></td>
+              </tr>
+              <thead>
+                <tr>
+                  <th scope="col">Total</th>
+                  <th scope="col"><Script>document.write(total)</Script></th>
+                </tr>
+                <tr>
+                  <th scope="col">Percentage</th>
+                  <th scope="col"><Script>document.write(perc.toFixed(2))</Script></th>
+                </tr>
+                <tr>
+                  <th scope="col">Division</th>
+                  <th scope="col">
+                    <Script>
+                        if (fisrt !="") {
+                            document.write(fisrt);
+                        }
+                        else if (second !="") {
+                            document.write(second);
+                        }
+                        else if (third !="") {
+                            document.write(third);
+                            // var third = "Third division";
+                        }
+                        // else {
+                        //     document.write(fail);
+                        // }
+                    
+                    </Script>
+                </th>
+                </tr>
+              </thead>
+            </tbody>
+        </table>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
